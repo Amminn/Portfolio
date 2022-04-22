@@ -1,7 +1,18 @@
 /*=============== PROFILE ===============*/
 .profile{
     position: relative;
-    padding-top: 3.5rem;
+    padding-top: 5.5rem;
+
+    .logo-link {
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        min-width: 120px;
+        
+        img {
+            max-width: 120px;
+        }
+    } 
 
     &__container{
         row-gap: 2rem;
@@ -12,7 +23,7 @@
     }
     &__perfil{
         & img{
-            width: 75px;
+            width: 100%;
         }
 
         width: 100px;
@@ -90,3 +101,4 @@
         column-gap: .25rem;
     }
 }
+

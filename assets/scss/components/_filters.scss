@@ -27,6 +27,28 @@
             background-color: var(--body-color);
         }
     }
+    .divider {
+        display: flex;
+        height: 4px;
+        width: 90px;
+        margin: 0.5rem auto 1.5rem;
+        
+        .large {
+            width: 80%;
+            height: 100%;
+            background-color: var(--title-color);
+            border-radius: 4px;
+        }
+        
+        .dot {
+            height: 4px;
+            width: 4px;
+            border-radius: 4px;
+            background-color: var(--title-color);
+            margin-left: 4px;    
+        }
+    }
+
 }
 
 /*=============== PROJECTS ===============*/
@@ -44,6 +66,10 @@
         &:hover .projects__modal{
             bottom: 0;
         }
+    }
+    &__title-top{
+        font-size: var(--h3-font-size);
+        text-align: center;
     }
     &__modal{
         position: absolute;
@@ -77,6 +103,7 @@
 }
 
 /*=============== SKILLS ===============*/
+
 .skills{
     &__content{
         row-gap: 3.5rem;
@@ -84,7 +111,7 @@
     &__title{
         font-size: var(--h3-font-size);
         text-align: center;
-        margin-bottom: 1.5rem;
+        // margin-bottom: 1.5rem;
     }
     &__box{
         display: flex;
@@ -103,7 +130,6 @@
         & i{
             font-size: 1rem;
             color: var(--first-color);
-
         }
     }
     &__name{
@@ -114,6 +140,36 @@
     &__level{
         font-size: var(--smaller-font-size);
     }
+}
+
+.about{
+    &__title{
+        font-size: var(--h3-font-size);
+        text-align: center;
+        // margin-bottom: 1.5rem;
+    }
+    &__about-me{
+        font-size: var(--smaller-font-size);
+        font-weight: 500;
+        line-height: 19px;
+        text-align: center;
+        max-width: 45ch;
+        margin: 0 auto 2rem;
+    }
+    &__floating{
+        display: block;
+        margin: 0 auto;
+        animation-name: floating; 
+        animation-duration: 5s; 
+        animation-iteration-count: infinite; 
+    }
+
+    @keyframes floating { 
+        0% { transform: translate(0,  -15px); } 
+        50%  { transform: translate(0, 15px); } 
+        100%   { transform: translate(0, -15px); }     
+    } 
+
 }
 
 /* Hide and show projects & skills */

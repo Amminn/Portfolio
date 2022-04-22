@@ -5,6 +5,8 @@ const tabs = document.querySelectorAll('[data-target]'),
 tabs.forEach(tab =>{
     tab.addEventListener('click', () =>{
         const target = document.querySelector(tab.dataset.target)
+        /* console.log(tab.dataset.target)  so when you click on about you get back #projects
+                                        becuase this element have data-target="#projects" */
 
         tabContents.forEach(tc =>{
             tc.classList.remove('filters__active')
@@ -26,11 +28,12 @@ const iconTheme = 'ri-sun-line'
 // Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
+// console.log(selectedIcon, selectedTheme)
 
 // We obtain the current theme that the interface has by validating the dark-theme class
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
-
+console.log('hello')
 // We validate if the user previously chose a topic
 if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
@@ -56,11 +59,13 @@ const sr = ScrollReveal({
     delay: 400,
 })
 
-sr.reveal(`.profile__border`)
-sr.reveal(`.profile__name`, {delay: 500})
-sr.reveal(`.profile__profession`, {delay: 600})
-sr.reveal(`.profile__social`, {delay: 700})
-sr.reveal(`.profile__info-group`, {interval: 100, delay: 700})
-sr.reveal(`.profile__buttons`, {delay: 800})
-sr.reveal(`.filters__content`, {delay: 900})
-sr.reveal(`.filters`, {delay: 1000})
+// sr.reveal(`.profile__border`)
+// sr.reveal(`.logo-link`, {delay: 100}) 
+// sr.reveal(`.change-theme`, {delay: 250})
+// sr.reveal(`.profile__name`, {delay: 500})
+// sr.reveal(`.profile__profession`, {delay: 600})
+// sr.reveal(`.profile__social`, {delay: 700})
+// sr.reveal(`.profile__info-group`, {interval: 100, delay: 700})
+// sr.reveal(`.profile__buttons`, {delay: 800})
+// sr.reveal(`.filters__content`, {delay: 900})
+// sr.reveal(`.filters`, {delay: 1000})

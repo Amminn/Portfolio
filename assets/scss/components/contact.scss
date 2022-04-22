@@ -1,0 +1,75 @@
+/*=============== CONTACT ===============*/
+.contact{
+    &__title {
+        font-size: var(--h3-font-size);
+        text-align: center;
+        // margin-bottom: 1.5rem;
+    }
+
+    &__form {
+        & > * {
+            display: block;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .input-icon-set {
+        width: 100%;
+        max-width: 380px;
+        margin-right: auto;
+        margin-left: auto;
+        border: 1px solid var(--first-color);
+        border-radius: 5px;
+        
+    }
+    &__input{
+        position: relative;
+        margin-bottom: 1rem;
+        
+        i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        input{
+            color: var(--text-color);
+            padding: 12px 40px 12px 15px;
+            height: 100%;
+            width: 100%;
+            outline: none;
+            border: none;
+            background-color: transparent;
+        }
+    }
+    textarea{
+        color: var(--text-color);
+        padding: 12px 40px 12px 15px;
+        height: 100%;
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: transparent;
+    }
+    .submit {
+        width: 100%;
+        max-width: 380px;
+        margin-right: auto;
+        margin-left: auto;
+        outline: none;
+        border: none;
+        color: var(--text-color);
+        font-size: var(--h3-font-size);
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 5px;
+        background-color: var(--container-color);
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0px 0px 29px 0px #0d1e2e34;
+            color: white;
+        }
+    }
+}

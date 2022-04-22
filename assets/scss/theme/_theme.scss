@@ -19,6 +19,22 @@ body.dark-theme{
     --text-color: hsl(var(--hue), 12%, 75%);
     --body-color: hsl(var(--hue), 40%, 8%);
     --container-color: hsl(var(--hue), 24%, 12%);
+
+    .logo-dark {
+        display: none;
+    }
+
+    .logo-white {
+        display: block;
+    }
+}
+
+.logo-dark {
+    display: block;
+}
+
+.logo-white {
+    display: none;
 }
 
 /*========== 
