@@ -757,6 +757,10 @@ body.show .filters.contact {
   text-align: center;
 }
 
+.contact__form {
+  margin: 0 1.2rem;
+}
+
 .contact__form > * {
   display: block;
   margin-bottom: 1rem;
@@ -811,13 +815,11 @@ body.show .filters.contact {
   margin-left: auto;
   outline: none;
   border: none;
-  color: var(--text-color);
   font-size: var(--h3-font-size);
+  color: var(--title-color);
   font-weight: bold;
   padding: 12px 20px;
   border-radius: 5px;
-  background-color: var(--container-color);
-  cursor: pointer;
 }
 
 .contact .submit:hover {

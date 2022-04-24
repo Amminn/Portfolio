@@ -580,6 +580,7 @@ body.show {
     }
 
     &__form {
+        margin: 0 1.2rem;
         & > * {
             display: block;
             margin-bottom: 1rem;
@@ -632,13 +633,12 @@ body.show {
         margin-left: auto;
         outline: none;
         border: none;
-        color: var(--text-color);
         font-size: var(--h3-font-size);
+        color: var(--title-color);
+        // background-color: var(--text-color-lighten);        cursor: pointer;
         font-weight: bold;
         padding: 12px 20px;
         border-radius: 5px;
-        background-color: var(--container-color);
-        cursor: pointer;
 
         &:hover {
             box-shadow: 0px 0px 29px 0px #0d1e2e34;
