@@ -20,6 +20,7 @@
   --text-color: hsl(var(--hue), 12%, 45%);
   --text-color-light: hsl(var(--hue), 8%, 75%);
   --text-color-lighten: hsl(var(--hue), 8%, 92%);
+  --text-color-unique: hsl(168, 100%, 59%, 1);
   --body-color: hsl(var(--hue), 100%, 99%);
   --container-color: #fff;
   /*========== Font and typography ==========*/
@@ -58,6 +59,7 @@ body {
   -webkit-transition: .3s;
   transition: .3s;
   /* For animation dark mode */
+  overflow-x: none;
 }
 
 h1, h2, h3 {
@@ -144,6 +146,108 @@ body.dark-theme .logo-white {
 
 .dark-theme::-webkit-scrollbar-thumb:hover {
   background-color: hsl(var(--hue), 8%, 32%);
+}
+
+/*=============== show and hide contact ===============*/
+@-webkit-keyframes shake-animation {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  1.78571% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  3.57143% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  5.35714% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  7.14286% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  8.92857% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  10.71429% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+@keyframes shake-animation {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  1.78571% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  3.57143% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  5.35714% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  7.14286% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  8.92857% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  10.71429% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+body.show .contact-btn {
+  display: none;
+}
+
+body.show .back-to-contact-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body.show .back-to-contact-btn i {
+  -webkit-animation: shake-animation 6s ease infinite;
+          animation: shake-animation 6s ease infinite;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+body.show .filters.container {
+  display: none;
+}
+
+body.show .filters.contact {
+  display: block;
+}
+
+.filters.contact {
+  display: none;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -319,6 +423,7 @@ body.dark-theme .logo-white {
   transition: .3s;
   -webkit-box-shadow: 0 8px 24px hsla(var(--hue), var(--sat), var(--lig), 0.25);
           box-shadow: 0 8px 24px hsla(var(--hue), var(--sat), var(--lig), 0.25);
+  cursor: pointer;
 }
 
 .button i {
@@ -449,15 +554,34 @@ body.dark-theme .logo-white {
 
 .projects__subtitle {
   font-size: var(--smaller-font-size);
+  text-transform: uppercase;
+  color: var(--text-color-unique);
+  font-weight: bold;
 }
 
 .projects__title {
-  font-size: var(--h3-font-size);
-  margin-bottom: .75rem;
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem;
+}
+
+.projects__tages {
+  font-size: 12px;
+  word-spacing: 10px;
+  color: var(--text-color-unique);
+  margin-bottom: 1rem;
+}
+
+.projects__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .projects__button {
   padding: .5rem;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
 }
 
 /*=============== SKILLS ===============*/
@@ -468,6 +592,7 @@ body.dark-theme .logo-white {
 .skills__title {
   font-size: var(--h3-font-size);
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .skills__box {
@@ -583,6 +708,50 @@ body.dark-theme .logo-white {
 }
 
 /*=============== CONTACT ===============*/
+.contact {
+  margin-top: 1.875rem;
+}
+
+.contact.success-send .contact__notification.success {
+  right: 5%;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.contact.failed-send .contact__notification.failed {
+  right: 5%;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.contact__notification {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding: 12px 20px;
+  position: fixed;
+  top: 3%;
+  color: white;
+  font-size: var(--small-font-size);
+  border-radius: 5px;
+  -webkit-transition: .7s ease right;
+  transition: .7s ease right;
+}
+
+.contact__notification.success {
+  right: -250%;
+  opacity: 0;
+  background-color: #4BB543;
+}
+
+.contact__notification.failed {
+  right: -250%;
+  opacity: 0;
+  background-color: #ff2f20;
+}
+
 .contact__title {
   font-size: var(--h3-font-size);
   text-align: center;
@@ -598,7 +767,7 @@ body.dark-theme .logo-white {
   max-width: 380px;
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid var(--first-color);
+  border: 1px solid var(--text-color);
   border-radius: 5px;
 }
 
@@ -655,6 +824,10 @@ body.dark-theme .logo-white {
   -webkit-box-shadow: 0px 0px 29px 0px #0d1e2e34;
           box-shadow: 0px 0px 29px 0px #0d1e2e34;
   color: white;
+}
+
+.back-to-contact-btn {
+  display: none;
 }
 
 /*=============== FOOTER ===============*/

@@ -1,6 +1,70 @@
 "use strict";
 
+/*=============== Contact ===============*/
+var filterSection = document.getElementById('filters');
+var contactBtn = document.getElementById('contactBtn');
+var contactSection = document.getElementById('contact');
+var userName = document.getElementById('name');
+var userEmail = document.getElementById('email');
+var userMessage = document.getElementById('message');
+var successNotification = document.getElementById('success');
+var failedNotification = document.getElementById('failed');
+var filterContent = filterSection.innerHTML;
+contactBtn.addEventListener('click', function () {});
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('.contact__form').addEventListener('submit', function (event) {
+    fetch("https://formsubmit.co/ajax/8cfd44e7be444302d0b82778fb518b5f", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        Name: userName.value,
+        Email: userEmail.value,
+        Message: userMessage.value
+      })
+    }).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      if (data.success === 'true') {
+        // empty the inputs only after submit is done
+        userName.value = '';
+        userEmail.value = '';
+        userMessage.value = 'The message is sent and i will get to you back soon'; // show success notificaion and then hide it after 8s
+
+        contactSection.classList.add('success-send'); // if the user click on the notification it will disappear
+
+        successNotification.addEventListener('click', function () {
+          contactSection.classList.remove('success-send');
+        });
+        setTimeout(function () {
+          contactSection.classList.remove('success-send');
+        }, 8000);
+      } else if (data.success === 'false') {
+        console.log('sorry there is an error '); // if there is an error we will get faild to sent notification and it will hide in 8s aswell
+
+        contactSection.classList.add('failed-send'); // if the user click on the notification it will disappear
+
+        failedNotification.addEventListener('click', function () {
+          contactSection.classList.remove('failed-send');
+        });
+        setTimeout(function () {
+          contactSection.classList.remove('failed-send');
+        }, 8000);
+      }
+    })["catch"](function (error) {
+      console.log(error);
+      contactSection.classList.add('failed-send');
+      setTimeout(function () {
+        contactSection.classList.remove('failed-send');
+      }, 8000);
+    });
+    event.preventDefault();
+  });
+});
 /*=============== FILTERS TABS ===============*/
+
 var tabs = document.querySelectorAll('[data-target]'),
     tabContents = document.querySelectorAll('[data-content]');
 tabs.forEach(function (tab) {
@@ -35,9 +99,8 @@ var getCurrentTheme = function getCurrentTheme() {
 
 var getCurrentIcon = function getCurrentIcon() {
   return themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line';
-};
+}; // We validate if the user previously chose a topic
 
-console.log('hello'); // We validate if the user previously chose a topic
 
 if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
@@ -61,33 +124,13 @@ var sr = ScrollReveal({
   distance: '60px',
   duration: 2500,
   delay: 400
-});
-sr.reveal(".profile__border");
-sr.reveal(".logo-link", {
-  delay: 100
-});
-sr.reveal(".change-theme", {
-  delay: 250
-});
-sr.reveal(".profile__name", {
-  delay: 500
-});
-sr.reveal(".profile__profession", {
-  delay: 600
-});
-sr.reveal(".profile__social", {
-  delay: 700
-});
-sr.reveal(".profile__info-group", {
-  interval: 100,
-  delay: 700
-});
-sr.reveal(".profile__buttons", {
-  delay: 800
-});
-sr.reveal(".filters__content", {
-  delay: 900
-});
-sr.reveal(".filters", {
-  delay: 1000
-});
+}); // sr.reveal(`.profile__border`)
+// sr.reveal(`.logo-link`, {delay: 100}) 
+// sr.reveal(`.change-theme`, {delay: 250})
+// sr.reveal(`.profile__name`, {delay: 500})
+// sr.reveal(`.profile__profession`, {delay: 600})
+// sr.reveal(`.profile__social`, {delay: 700})
+// sr.reveal(`.profile__info-group`, {interval: 100, delay: 700})
+// sr.reveal(`.profile__buttons`, {delay: 800})
+// sr.reveal(`.filters__content`, {delay: 900})
+// sr.reveal(`.filters`, {delay: 1000})

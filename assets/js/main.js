@@ -1,3 +1,83 @@
+/*=============== Contact ===============*/
+const body = document.body;
+let showContact = document.getElementById('showContact')
+let hideContact = document.getElementById('hideContact')
+
+let filterSection = document.getElementById('filters')
+let contactBtn = document.getElementById('contactBtn')
+let contactSection = document.getElementById('contact')
+
+let userName = document.getElementById('name')
+let userEmail = document.getElementById('email')
+let userMessage = document.getElementById('message')
+let successNotification = document.getElementById('success')
+let failedNotification = document.getElementById('failed')
+
+showContact.addEventListener('click', () => {
+    body.classList.toggle('show')
+})
+hideContact.addEventListener('click', () => {
+    body.classList.toggle('show')
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.contact__form').addEventListener('submit', function (event) {
+        fetch("https://formsubmit.co/ajax/8cfd44e7be444302d0b82778fb518b5f", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                Name: userName.value,
+                Email: userEmail.value,
+                Message: userMessage.value
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.success === 'true') {
+                // empty the inputs only after submit is done
+                userName.value = ''
+                userEmail.value = ''
+                userMessage.value = 'The message is sent and i will get to you back soon'
+
+                // show success notificaion and then hide it after 8s
+                contactSection.classList.add('success-send')
+
+                // if the user click on the notification it will disappear
+                successNotification.addEventListener('click', () =>{
+                    contactSection.classList.remove('success-send')
+                })
+                setTimeout(() => {
+                    contactSection.classList.remove('success-send')
+                }, 8000);
+
+            } else if (data.success === 'false') {
+                console.log('sorry there is an error ')
+                // if there is an error we will get faild to sent notification and it will hide in 8s aswell
+                contactSection.classList.add('failed-send')
+
+                // if the user click on the notification it will disappear
+                failedNotification.addEventListener('click', () => {
+                    contactSection.classList.remove('failed-send')
+                })
+                setTimeout(() => {
+                    contactSection.classList.remove('failed-send')
+                }, 8000);
+            }
+        })
+        .catch(error => {
+            console.log(error)
+            contactSection.classList.add('failed-send')
+            setTimeout(() => {
+                contactSection.classList.remove('failed-send')
+            }, 8000);
+        });
+        event.preventDefault();
+    });
+});
+
 /*=============== FILTERS TABS ===============*/
 const tabs = document.querySelectorAll('[data-target]'),
       tabContents = document.querySelectorAll('[data-content]')
@@ -33,7 +113,6 @@ const selectedIcon = localStorage.getItem('selected-icon')
 // We obtain the current theme that the interface has by validating the dark-theme class
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
-console.log('hello')
 // We validate if the user previously chose a topic
 if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark

@@ -15,7 +15,7 @@
 
         <title>Mini portfolio website - Bedimcode</title>
     </head>
-    <body>
+    <body class="">
         <!--=============== HEADER ===============-->
         <header class="profile container">
             <!-- Theme button -->
@@ -85,9 +85,13 @@
                         <!-- <a href="https://m.me/zzzzZzDzz" target="_blank" class="button button__small button__gray">
                             <i class="ri-messenger-line"></i>
                         </a> -->
-                        <a href="#" target="_blank" class="button button__small button__gray">
+                        <a id="showContact" class="contact-btn button button__small button__gray">
                             Contact
                             <i class="ri-mail-send-line"></i>
+                        </a>
+                        <a id="hideContact" class="back-to-contact-btn button button__small button__gray">
+                            Go Back
+                            <i class="ri-arrow-go-back-line"></i>
                         </a>
                     </div>
                 </div>
@@ -96,7 +100,7 @@
 
         <!--=============== MAIN ===============-->
         <main class="main">
-            <section class="filters container">
+            <section id="filters" class="filters container">
                 <!--=============== FILTERS TABS ===============-->
                 <ul class="filters__content">
                     <button class="filters__button " data-target="#projects">
@@ -125,30 +129,39 @@
 
                         <article class="projects__card">
                             <!-- Insert your image in a rectangular format (Ex: 600 x 400, 1000 x 800, 1200 x 1000, etc) -->
-                            <img src="assets/img/udes.png" alt="" class="projects__img">
+                            <img loading="lazy" src="assets/img/udes.png" alt="" class="projects__img">
 
                             <div class="projects__modal">
                                 <div>
-                                    <span class="projects__subtitle">Web</span>
-                                    <h3 class="projects__title">UDES website</h3>
-                                    <a title="After thier edit" href="http://udes.cder.dz/" target="_blank" class="projects__button button button__small">
-                                        <i class="ri-external-link-fill"></i>
-                                    </a>
-                                    <a title='My own version "without thier edit"' href="http://localhost/udes.cder.dz/" target="_blank"  class="projects__button button button__small">
-                                        <i class="ri-external-link-line"></i>
-                                    </a>
-                                    <a title="Dashboard of the website" href="http://localhost/udes.cder.dz/adding%20login/login.php?idk=idk" target="_blank"  class="projects__button button button__small">
-                                        <i class="ri-apps-line"></i>
-                                    </a>
-                                    <a title="design file" href="https://www.figma.com/file/S4jO939Mpf9ieQRUSnPwH1/web-pages?node-id=1921%3A99" target="_blank" class="projects__button button button__small">
-                                        <i class="ri-quill-pen-line"></i>
-                                    </a>
+                                    <span class="projects__subtitle">Full-Stack Design</span>
+                                    <h3 class="projects__title">UDES Internship</h3>
+                                    <p class="projects__tages">
+                                        HTML  CSS  JS  PHP  MySQL  phpMyAdmin <br>
+                                        Photoshop  illustrator  Figma
+                                    </p>
+                                    <div class="projects__flex">
+                                        <div class="left">
+                                            <a title="After thier edit" href="http://udes.cder.dz/" target="_blank" class="projects__button button button__small">
+                                                <i class="ri-external-link-fill"></i>
+                                            </a>
+                                            <a title='My own version "without thier edit"' href="http://localhost/udes.cder.dz/" target="_blank"  class="projects__button button button__small">
+                                                <i class="ri-external-link-line"></i>
+                                            </a>
+                                            <a title="Dashboard of the website" href="http://localhost/udes.cder.dz/adding%20login/login.php?idk=idk" target="_blank"  class="projects__button button button__small">
+                                                <i class="ri-apps-line"></i>
+                                            </a>
+                                            <a title="design file" href="https://www.figma.com/file/S4jO939Mpf9ieQRUSnPwH1/web-pages?node-id=1921%3A99" target="_blank" class="projects__button button button__small">
+                                                <i class="ri-quill-pen-line"></i>
+                                            </a>
+                                        </div>
+                                        <a href="#" class="button-right">Case Study</a>
+                                    </div>
                                 </div>
                             </div>
                         </article>
 
                         <article class="projects__card">
-                            <img src="assets/img/payapi.png" alt="" class="projects__img">
+                            <img loading="lazy" src="assets/img/payapi.png" alt="" class="projects__img">
 
                             <div class="projects__modal">
                                 <div>
@@ -165,7 +178,7 @@
                         </article>
 
                         <article class="projects__card">
-                            <img src="assets/img/tipaza.png" alt="" class="projects__img">
+                            <img loading="lazy" src="assets/img/tipaza.png" alt="" class="projects__img">
 
                             <div class="projects__modal">
                                 <div>
@@ -182,7 +195,7 @@
                         </article>
 
                         <article class="projects__card">
-                            <img src="assets/img/seaSide.png" alt="" class="projects__img">
+                            <img loading="lazy" src="assets/img/seaSide.png" alt="" class="projects__img">
 
                             <div class="projects__modal">
                                 <div>
@@ -199,7 +212,7 @@
                         </article>
 
                         <article class="projects__card">
-                            <img src="assets/img/code-generator.png" alt="" class="projects__img">
+                            <img loading="lazy" src="assets/img/code-generator.png" alt="" class="projects__img">
 
                             <div class="projects__modal">
                                 <div>
@@ -216,7 +229,7 @@
                         </article>
 
                         <article class="projects__card">
-                            <img src="assets/img/dark-color-picker-dropdown.png" alt="" class="projects__img">
+                            <img loading="lazy" src="assets/img/dark-color-picker-dropdown.png" alt="" class="projects__img">
 
                             <div class="projects__modal">
                                 <div>
@@ -233,7 +246,7 @@
                         </article>
 
                         <article class="projects__card">
-                            <img src="assets/img/ceb-form.png" alt="" class="projects__img">
+                            <img loading="lazy" src="assets/img/ceb-form.png" alt="" class="projects__img">
 
                             <div class="projects__modal">
                                 <div>
@@ -248,7 +261,7 @@
                         </article>
 
                         <article class="projects__card">
-                            <img src="assets/img/login.png" alt="" class="projects__img">
+                            <img loading="lazy" src="assets/img/login.png" alt="" class="projects__img">
 
                             <div class="projects__modal">
                                 <div>
@@ -276,6 +289,7 @@
                                 <div class="dot"></div>
                                 <div class="dot"></div>
                             </div>
+
                             <p class="about__about-me">Well-organised person, problem solver, independent employee with high attention to detail. Fan of Games, outdoor activities.
                                 A family person, interested in the entire web development and design spectrum and working on ambitious projects with positive people.
                             </p>
@@ -399,39 +413,47 @@
                     </div>
                 </div>
             </section>
-        </main>
 
-        <main class="main">
-            <section class="filters container">
-                <div class="contact">
-                    <h3 class="contact__title">Contact</h3>
-                        <div class="divider">
-                            <div class="large"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                        </div>
+            <!-- contact -->
 
-                        <form class="contact__form" id="contactform" action="https://formsubmit.io/send/cb44ac52-b8a0-4463-84b8-eab96efe6d05" method="POST">
-                            <!-- <input name="_redirect" type="hidden" id="name" value="https://your website url"> -->
-                            <div class="contact__flex">
-                                <div class="contact__input input-icon-set">
-                                    <i class="ri-user-line"></i>
-                                    <input type="text" placeholder="Name" required>
-                                </div>
-                                <div class="contact__input input-icon-set">
-                                    <i class="ri-mail-send-line"></i>
-                                    <input type="email" placeholder="Email" required>
-                                </div>
-                            </div>
+            <section class="filters contact" id="contact">
 
-                            <input name="_formsubmit_id" type="text" style="display:none">
-
-                            <textarea class="input-icon-set" name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                            <input class="submit" type="submit" value="Submit">
-                        </form>
-
+                <div class="contact__notification success" id="success">
+                    <p>Your message has been sent successfully</p>
                 </div>
+                <div class="contact__notification failed" id="failed">
+                    <p>Couldn't send the message</p>
+                </div>
+
+                <h3 class="contact__title">Contact</h3>
+                    <div class="divider">
+                        <div class="large"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>  
+
+                <form class="contact__form">
+                    <!-- <input name="_redirect" type="hidden" id="name" value="https://your website url"> -->
+                    <div class="contact__flex">
+                        <div class="contact__input input-icon-set">
+                            <i class="ri-user-line"></i>
+                            <input name="name" type="text" id="name" placeholder="Name" required>
+                        </div>
+                        <div class="contact__input input-icon-set">
+                            <i class="ri-mail-send-line"></i>
+                            <input name="email" type="email" id="email" placeholder="Email" required>
+                        </div>
+                    </div>
+
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#done">
+
+                    <textarea class="input-icon-set" name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                    <input class="submit" value="Submit" type="submit">
+                </form>
+
             </section>
         </main>
         
