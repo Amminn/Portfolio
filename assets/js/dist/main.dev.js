@@ -1,6 +1,9 @@
 "use strict";
 
 /*=============== Contact ===============*/
+var body = document.body;
+var showContact = document.getElementById('showContact');
+var hideContact = document.getElementById('hideContact');
 var filterSection = document.getElementById('filters');
 var contactBtn = document.getElementById('contactBtn');
 var contactSection = document.getElementById('contact');
@@ -9,8 +12,12 @@ var userEmail = document.getElementById('email');
 var userMessage = document.getElementById('message');
 var successNotification = document.getElementById('success');
 var failedNotification = document.getElementById('failed');
-var filterContent = filterSection.innerHTML;
-contactBtn.addEventListener('click', function () {});
+showContact.addEventListener('click', function () {
+  body.classList.toggle('show');
+});
+hideContact.addEventListener('click', function () {
+  body.classList.toggle('show');
+});
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('.contact__form').addEventListener('submit', function (event) {
     fetch("https://formsubmit.co/ajax/8cfd44e7be444302d0b82778fb518b5f", {
@@ -116,6 +123,17 @@ themeButton.addEventListener('click', function () {
 
   localStorage.setItem('selected-theme', getCurrentTheme());
   localStorage.setItem('selected-icon', getCurrentIcon());
+});
+var laptop = document.querySelector('.laptop');
+var happyFace = document.querySelector('.face');
+var pen = document.querySelector('.pen');
+window.addEventListener('mousemove', function (evt) {
+  var x = -(window.innerWidth / 2 - evt.pageX) / 17;
+  var y = -(window.innerHeight / 2 - evt.pageY) / 17;
+  console.log(x);
+  laptop.style.transform = "translateY(".concat(y / 4 * -1, "px) translateX(").concat(x / 4 * -1, "px)");
+  happyFace.style.transform = "translateY(".concat(y / 1.5, "px) translateX(").concat(x / 1.5, "px)");
+  pen.style.transform = "translateY(".concat(y / 5, "px) translateX(").concat(x / 5, "px)");
 });
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 

@@ -130,6 +130,19 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+const laptop = document.querySelector('.laptop')
+const happyFace = document.querySelector('.face')
+const pen = document.querySelector('.pen')
+
+window.addEventListener('mousemove', (evt) => {
+    const x = -(window.innerWidth / 2 - evt.pageX) / 17;
+    const y = -(window.innerHeight / 2 - evt.pageY) / 17;
+    console.log(x)
+    laptop.style.transform = `translateY(${(y/4)* -1}px) translateX(${(x/4)* -1}px)`;
+    happyFace.style.transform = `translateY(${y / 1.5}px) translateX(${x / 1.5}px)`;
+    pen.style.transform = `translateY(${y / 5}px) translateX(${x / 5}px)`;
+});  
+
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
     origin: 'top',

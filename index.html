@@ -1,307 +1,659 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="assets/img/favicon.png" title="hello" type="image/x-icon">
-        
-        <!--=============== REMIX ICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      title="hello"
+      type="image/x-icon"
+    />
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="assets/scss/styles.css">
+    <!--=============== REMIX ICONS ===============-->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <!--=============== boxicons ICONS ===============-->
+    <link 
+      href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' 
+      rel='stylesheet'
+    />
 
-        <title>Mini portfolio website</title>
-    </head>
-    <body class="">
-        <!--=============== HEADER ===============-->
-        <header class="profile container">
-            <!-- Theme button -->
-            <i class="ri-moon-line change-theme" id="theme-button"></i>
-            <a class="logo-link" href="">
-                <img src="./assets/img/vector/default-monochrome-white.svg" alt="Amin logo" class="logo logo-white ">
-                <img src="./assets/img/vector/default-monochrome-dark.svg" alt="Amin logo" class="logo logo-dark">
-            </a>
-            
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/scss/styles.css" />
 
-            <div class="profile__container grid">
-                <div class="profile__data">
-                    <div class="profile__border">
-                        <div class="profile__perfil">
-                            <!-- Insert your image, according to the example size of the portfolio -->
-                            <img src="assets/img/black-suit.png" alt="Image from https://icons8.com">
-                        </div>
-                    </div>
-
-                    <h2 class="profile__name">Benkhaled Amin</h2>
-                    <h3 class="profile__profession">Web developer</h3>
-
-                    <ul class="profile__social">
-                        <a href="https://www.instagram.com/" target="_blank" class="profile__social-link">
-                            <i class="ri-instagram-line"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="profile__social-link">
-                            <i class="ri-linkedin-box-line"></i>
-                        </a>
-                        <a href="https://github.com/Amminn" target="_blank" class="profile__social-link">
-                            <i class="ri-github-line"></i>
-                        </a>
-                    </ul>
-                </div>
-
-                <div class="profile__info grid">
-                    <div class="profile__info-group">
-                        <h3 class="profile__info-number">2</h3>
-                        <p class="profile__info-description">
-                            Years of <br> Experience
-                        </p>
-                    </div>
-                    <div class="profile__info-group">
-                        <h3 class="profile__info-number">+40</h3>
-                        <p class="profile__info-description">
-                            Completed <br> projects
-                        </p>
-                    </div>
-                    <div class="profile__info-group">
-                        <h3 class="profile__info-number">4</h3>
-                        <p class="profile__info-description">Satisfied <br> customers</p>
-                    </div>
-                </div>
-
-                <div class="profile__buttons">
-                    <!-- Insert your CV -->
-                    <a download="" href="assets/pdf/CV.pdf" class="button">
-                        Download CV <i class="ri-download-line"></i>
-                    </a>
-
-                    <div class="profile__buttons-small">
-                        <!-- Insert a real number plus country code -->
-                        <!-- <a href="https://api.whatsapp.com/send?phone=213658380400&text=Hello, more information!" target="_blank" class="button button__small button__gray">
-                            <i class="ri-whatsapp-line"></i>
-                        </a> -->
-                        <!-- Insert your brand name or profile -->
-                        <!-- <a href="https://m.me/zzzzZzDzz" target="_blank" class="button button__small button__gray">
-                            <i class="ri-messenger-line"></i>
-                        </a> -->
-                        <a id="showContact" class="contact-btn button button__small button__gray">
-                            Contact
-                            <i class="ri-mail-send-line"></i>
-                        </a>
-                        <a id="hideContact" class="back-to-contact-btn button button__small button__gray">
-                            Go Back
-                            <i class="ri-arrow-go-back-line"></i>
-                        </a>
-                    </div>
-                </div>
+    <title>Mini portfolio website</title>
+  </head>
+  <body class="">
+    <!--=============== HEADER ===============-->
+    <header class="profile container">
+      <!-- Theme button -->
+      <i class="ri-moon-line change-theme" id="theme-button"></i>
+      <a class="logo-link" href="">
+        <img
+          src="./assets/img/vector/default-monochrome-white.svg"
+          alt="Amin logo"
+          class="logo logo-white"
+        />
+        <img
+          src="./assets/img/vector/default-monochrome-dark.svg"
+          alt="Amin logo"
+          class="logo logo-dark"
+        />
+      </a>
+      <div class="flex">
+        <div class="profile__container grid">
+          <div class="profile__data">
+  
+            <div class="profile__border">
+              <div class="profile__perfil">
+                <!-- Insert your image, according to the example size of the portfolio -->
+                <img
+                  src="assets/img/black-suit.png"
+                  alt="Image from https://icons8.com"
+                />
+              </div>
             </div>
-        </header>
+  
+            <h3 class="profile__hi">Hi, there!</h3>
+            <h2 class="profile__name">Benkhaled Amin</h2>
+            <h3 class="profile__profession">Web developer</h3>
+  
+            <ul class="profile__social">
+              <a
+                href="https://github.com/Amminn"
+                target="_blank"
+                class="profile__social-link"
+              >
+                <i class="ri-github-fill"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                class="profile__social-link"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="profile__social-link"
+              >
+                <i class="ri-instagram-line"></i>
+                <!-- <i class='bx bxl-instagram-alt'></i> -->
+              </a>
+            </ul>
+          </div>
+  
+          <div class="profile__info grid">
+            <div class="profile__info-group">
+              <h3 class="profile__info-number">2</h3>
+              <p class="profile__info-description">
+                Years of <br />
+                Experience
+              </p>
+            </div>
+            <div class="profile__info-group">
+              <h3 class="profile__info-number">+40</h3>
+              <p class="profile__info-description">
+                Completed <br />
+                projects
+              </p>
+            </div>
+            <div class="profile__info-group">
+              <h3 class="profile__info-number">4</h3>
+              <p class="profile__info-description">
+                Satisfied <br />
+                customers
+              </p>
+            </div>
+          </div>
+  
+          <div class="profile__buttons">
+            <!-- Insert your CV -->
+            <a download="" href="assets/pdf/CV.pdf" class="button">
+              Download CV <i class="ri-download-line"></i>
+            </a>
+  
+            <div class="profile__buttons-small">
+              <!-- Insert a real number plus country code -->
+              <!-- <a href="https://api.whatsapp.com/send?phone=213658380400&text=Hello, more information!" target="_blank" class="button button__small button__gray">
+                  <i class="ri-whatsapp-line"></i>
+              </a> -->
+              <!-- Insert your brand name or profile -->
+              <!-- <a href="https://m.me/zzzzZzDzz" target="_blank" class="button button__small button__gray">
+                  <i class="ri-messenger-line"></i>
+              </a> -->
+              <a
+                id="showContact"
+                class="contact-btn button button__small button__gray"
+              >
+                Contact
+                <i class='bx bx-mail-send fast-btn' ></i>
+              </a>
+              <a
+                id="hideContact"
+                class="back-to-contact-btn button button__small button__gray"
+              >
+                Go Back
+                <i class="ri-arrow-go-back-line"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="desktop-image">
+          
+          <img class="image-assets face" src="./assets/img/screen-face.png" alt="">
+          <img class="image-assets laptop" src="./assets/img/laptop.png" alt="">
+          <img class="image-assets pen" src="./assets/img/pen.png" alt="">
+          <img class="guy-background" src="./assets/img/desktop-image.png" alt="">
+        </div>
+      </div>
+    </header>
 
-        <!--=============== MAIN ===============-->
-        <main class="main">
-            <section id="filters" class="filters container">
-                <!--=============== FILTERS TABS ===============-->
-                <ul class="filters__content">
-                    <button class="filters__button " data-target="#projects">
-                        Projects
-                    </button>
-                    <button class="filters__button filter-tab-active" data-target="#about">
-                        About
-                    </button>
-                    <button class="filters__button" data-target="#skills">
-                        Skills
-                    </button>
-                </ul>
+    <!--=============== MAIN ===============-->
 
-                <div class="filters__sections">
-                    <!--=============== PROJECTS ===============-->
-                    <div class="projects__content grid " data-content id="projects">
-                        <div class="title">
-                            <h3 class="projects__title-top">My Projects</h3>
-                            <div class="divider">
-                                <div class="large"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
-                        </div>
+    <main class="main">
+      <section id="filters" class="filters container">
+        <!--=============== FILTERS TABS ===============-->
+        <ul class="filters__content">
+          <button class="filters__button" data-target="#projects">
+            Projects
+          </button>
+          <button
+            class="filters__button filter-tab-active"
+            data-target="#about"
+          >
+            About
+          </button>
+          <button class="filters__button" data-target="#skills">Skills</button>
+        </ul>
 
-                        <article class="projects__card">
-                            <!-- Insert your image in a rectangular format (Ex: 600 x 400, 1000 x 800, 1200 x 1000, etc) -->
-                            <img loading="lazy" src="assets/img/udes.png" alt="" class="projects__img">
+        <div class="filters__sections">
+          <!--=============== PROJECTS ===============-->
+          <div class="projects__content grid" data-content id="projects">
+            <div class="title">
+              <h3 class="projects__title-top">My Projects</h3>
+              <div class="divider">
+                <div class="large"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
 
-                            <div class="projects__modal">
-                                <div>
-                                    <span class="projects__subtitle">Full-Stack Design</span>
-                                    <h3 class="projects__title">UDES Internship</h3>
-                                    <p class="projects__tages">
-                                        HTML  CSS  JS  PHP  MySQL  phpMyAdmin <br>
-                                        Photoshop  illustrator  Figma
-                                    </p>
-                                    <div class="projects__flex">
-                                        <div class="left">
-                                            <a title="After thier edit" href="http://udes.cder.dz/" target="_blank" class="projects__button button button__small">
-                                                <i class="ri-external-link-fill"></i>
-                                            </a>
-                                            <a title='My own version "without thier edit"' href="http://localhost/udes.cder.dz/" target="_blank"  class="projects__button button button__small">
-                                                <i class="ri-external-link-line"></i>
-                                            </a>
-                                            <a title="Dashboard of the website" href="http://localhost/udes.cder.dz/adding%20login/login.php?idk=idk" target="_blank"  class="projects__button button button__small">
-                                                <i class="ri-apps-line"></i>
-                                            </a>
-                                            <a title="design file" href="https://www.figma.com/file/S4jO939Mpf9ieQRUSnPwH1/web-pages?node-id=1921%3A99" target="_blank" class="projects__button button button__small">
-                                                <i class="ri-quill-pen-line"></i>
-                                            </a>
-                                        </div>
-                                        <a href="#" class="button-right">Case Study</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
+            <article class="projects__card">
+              <!-- Insert your image in a rectangular format (Ex: 600 x 400, 1000 x 800, 1200 x 1000, etc) -->
+              <img
+                loading="lazy"
+                src="assets/img/udes.png"
+                alt=""
+                class="projects__img"
+              />
 
-                        <article class="projects__card">
-                            <img loading="lazy" src="assets/img/payapi.png" alt="" class="projects__img">
-
-                            <div class="projects__modal">
-                                <div>
-                                    <span class="projects__subtitle">Web</span>
-                                    <h3 class="projects__title">PayAPI website</h3>
-                                    <a href="https://amminn.github.io/payapi/" target="_blank"  class="projects__button button button__small">
-                                        <i class="ri-external-link-line"></i>
-                                    </a>
-                                    <a href="https://www.figma.com/file/ym23ZRONxUg94HOSKDXiuX/payapi-multi-page-website?node-id=0%3A1" target="_blank" class="projects__button button button__small">
-                                        <i class="ri-quill-pen-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="projects__card">
-                            <img loading="lazy" src="assets/img/tipaza.png" alt="" class="projects__img">
-
-                            <div class="projects__modal">
-                                <div>
-                                    <span class="projects__subtitle">WordPress</span>
-                                    <h3 class="projects__title">Willaya Tipaza</h3>
-                                    <a href="https://wilaya-tipaza.dz/index.php/fr/" target="_blank" class="projects__button button button__small">
-                                        <i class="ri-external-link-line"></i>
-                                    </a>
-                                    <a href="https://egiking.com" target="_blank" class="projects__button button button__small">
-                                        <i class="ri-external-link-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="projects__card">
-                            <img loading="lazy" src="assets/img/seaSide.png" alt="" class="projects__img">
-
-                            <div class="projects__modal">
-                                <div>
-                                    <span class="projects__subtitle">Guide project</span>
-                                    <h3 class="projects__title">Sea Side website</h3>
-                                    <a href="https://amminn.github.io/Travel-Sea-WebSite/" target="_blank" class="projects__button button button__small">
-                                        <i class="ri-external-link-line"></i>
-                                    </a>
-                                    <a href="https://www.youtube.com/watch?v=1GukDOICJg4" target="_blank" class="projects__button button button__small">
-                                        <i class="ri-youtube-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="projects__card">
-                            <img loading="lazy" src="assets/img/code-generator.png" alt="" class="projects__img">
-
-                            <div class="projects__modal">
-                                <div>
-                                    <span class="projects__subtitle">Web Design</span>
-                                    <h3 class="projects__title">Code-Generator</h3>
-                                    <a href="https://amminn.github.io/Code-Generator/" class="projects__button button button__small">
-                                        <i class="ri-external-link-line"></i>
-                                    </a>
-                                    <a href="https://www.figma.com/file/GhTSi4H4RKoCAsVoy6TTHf/Random-Password-Generator-(Copy)?node-id=102%3A702" target="_blank" class="projects__button button button__small">
-                                        <i class="ri-quill-pen-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="projects__card">
-                            <img loading="lazy" src="assets/img/dark-color-picker-dropdown.png" alt="" class="projects__img">
-
-                            <div class="projects__modal">
-                                <div>
-                                    <span class="projects__subtitle">Web App</span>
-                                    <h3 class="projects__title">Color-Picker</h3>
-                                    <a href="https://amminn.github.io/color-picker-api/" class="projects__button button button__small">
-                                        <i class="ri-external-link-line"></i>
-                                    </a>
-                                    <a href="https://www.figma.com/file/TguaaPCIsC41M9B4u45CiZ/Color-Picker-(Copy)?node-id=2%3A1155" target="_blank" class="projects__button button button__small">
-                                        <i class="ri-quill-pen-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="projects__card">
-                            <img loading="lazy" src="assets/img/ceb-form.png" alt="" class="projects__img">
-
-                            <div class="projects__modal">
-                                <div>
-                                    <span class="projects__subtitle">Web Design</span>
-                                    <h3 class="projects__title">CEB Form</h3>
-
-                                    <a href="https://www.figma.com/file/vV6Z39gSsE3hwbCC7WYIp2/CEB-Form?node-id=0%3A1" target="_blank" class="projects__button button button__small">
-                                        <i class="ri-quill-pen-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="projects__card">
-                            <img loading="lazy" src="assets/img/login.png" alt="" class="projects__img">
-
-                            <div class="projects__modal">
-                                <div>
-                                    <span class="projects__subtitle">Web Design</span>
-                                    <h3 class="projects__title">Login System</h3>
-
-                                    <a href="https://alirezahekmati.github.io/login-group-project/signup.html" target="_blank" class="projects__button button button__small">
-                                        <i class="ri-external-link-line"></i>
-                                    </a>
-                                    <a href="https://www.figma.com/file/GNDQvmeyCdjWEM1ZoJyyYO/%2FLogin-sytem?node-id=1%3A2" target="_blank" class="projects__button button button__small">
-                                        <i class="ri-quill-pen-line"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Full-Stack Design</span>
+                  <h3 class="projects__title">UDES Internship</h3>
+                  <p class="projects__tages">
+                    HTML CSS JS PHP MySQL WordPress<br />
+                    Figma Photoshop illustrator
+                  </p>
+                  <div class="projects__flex">
+                    <div class="left">
+                      <a
+                        title='My own version "without thier edit"'
+                        href="http://localhost/udes.cder.dz/"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-external-link-line"></i>
+                      </a>
+                      <a
+                        title="Dashboard of the website"
+                        href="http://localhost/udes.cder.dz/adding%20login/login.php?idk=idk"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-apps-line"></i>
+                      </a>
+                      <a
+                        title="design file"
+                        href="https://www.figma.com/file/S4jO939Mpf9ieQRUSnPwH1/web-pages?node-id=1921%3A99"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-quill-pen-line"></i>
+                      </a>
                     </div>
+                    <a href="#" class="button-right"
+                      >Case Study
+                      <i class="ri-arrow-right-line"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
 
-                    <!--=============== ABOUT ===============-->
-                    <div class="about__content none filters__active" data-content id="about">
-                        <div class="about__area">
-                            <h3 class="about__title">About me</h3>
-                            <div class="divider">
-                                <div class="large"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
+            <article class="projects__card">
+              <img
+                loading="lazy"
+                src="assets/img/payapi.png"
+                alt=""
+                class="projects__img"
+              />
 
-                            <p class="about__about-me">Well-organised person, problem solver, independent employee with high attention to detail. Fan of Games, outdoor activities.
-                                A family person, interested in the entire web development and design spectrum and working on ambitious projects with positive people.
-                            </p>
-
-                            <img class="about__floating" src="./assets/img/floating.png" alt="">
-                        </div>
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Front End</span>
+                  <h3 class="projects__title">PayAPI website</h3>
+                  <p class="projects__tages">
+                    HTML CSS SCSS JS<br />
+                    Figma
+                  </p>
+                  <div class="projects__flex">
+                    <div class="left">
+                      <a
+                        href="https://amminn.github.io/payapi/"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-external-link-line"></i>
+                      </a>
+                      <a
+                        href="https://www.figma.com/file/ym23ZRONxUg94HOSKDXiuX/payapi-multi-page-website?node-id=0%3A1"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-quill-pen-line"></i>
+                      </a>
                     </div>
+                    <!-- <a href="#" class="button-right">Case Study
+                        <i class="ri-arrow-right-line"></i>
+                    </a> -->
+                  </div>
+                </div>
+              </div>
+            </article>
 
-                    <!--=============== SKILLS ===============-->
-                    <div class="skills__content grid" data-content id="skills">
-                        <div class="skills__area">
-                            <h3 class="skills__title">Frontend Developer</h3>
+            <article class="projects__card">
+              <img
+                loading="lazy"
+                src="assets/img/tipaza.png"
+                alt=""
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">WordPress</span>
+                  <h3 class="projects__title">Willaya Tipaza</h3>
+                  <p class="projects__tages">HTML CSS JS PHP WordPress</p>
+                  <div class="projects__flex">
+                    <div class="left">
+                      <a
+                        href="https://wilaya-tipaza.dz/index.php/fr/"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-external-link-line"></i>
+                      </a>
+                      <a
+                        href="https://egiking.com"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-external-link-line"></i>
+                      </a>
+                    </div>
+                    <a href="#" class="button-right"
+                      >Case Study
+                      <i class="ri-arrow-right-line"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                loading="lazy"
+                src="assets/img/seaSide.png"
+                alt=""
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Guide project</span>
+                  <h3 class="projects__title">Sea Side website</h3>
+                  <p class="projects__tages">HTML CSS JS</p>
+                  <div class="projects__flex">
+                    <div class="left">
+                      <a
+                        href="https://amminn.github.io/Travel-Sea-WebSite/"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-external-link-line"></i>
+                      </a>
+                      <a
+                        href="https://www.youtube.com/watch?v=1GukDOICJg4"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-youtube-line"></i>
+                      </a>
+                    </div>
+                    <!-- <a href="#" class="button-right">Case Study
+                        <i class="ri-arrow-right-line"></i>
+                    </a> -->
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                loading="lazy"
+                src="assets/img/code-generator.png"
+                alt=""
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Solo Project</span>
+                  <h3 class="projects__title">Code-Generator</h3>
+                  <p class="projects__tages">
+                    HTML CSS JS <br />
+                    Figma
+                  </p>
+                  <div class="projects__flex">
+                    <div class="left">
+                      <a
+                        href="https://amminn.github.io/Code-Generator/"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-external-link-line"></i>
+                      </a>
+                      <a
+                        href="https://www.figma.com/file/GhTSi4H4RKoCAsVoy6TTHf/Random-Password-Generator-(Copy)?node-id=102%3A702"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-quill-pen-line"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                loading="lazy"
+                src="assets/img/dark-color-picker-dropdown.png"
+                alt=""
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web App</span>
+                  <h3 class="projects__title">Color-Picker</h3>
+                  <p class="projects__tages">
+                    HTML CSS JS<br />
+                    Figma
+                  </p>
+                  <div class="projects__flex">
+                    <div class="left">
+                      <a
+                        href="https://amminn.github.io/color-picker-api/"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-external-link-line"></i>
+                      </a>
+                      <a
+                        href="https://www.figma.com/file/TguaaPCIsC41M9B4u45CiZ/Color-Picker-(Copy)?node-id=2%3A1155"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-quill-pen-line"></i>
+                      </a>
+                    </div>
+                    <!-- <a href="#" class="button-right">Case Study
+                                            <i class="ri-arrow-right-line"></i>
+                                        </a> -->
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                loading="lazy"
+                src="assets/img/ceb-form.png"
+                alt=""
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web Design Front-end</span>
+                  <h3 class="projects__title">CEB Form</h3>
+                  <p class="projects__tages">
+                    HTML CSS JS<br />
+                    Figma
+                  </p>
+                  <div class="projects__flex">
+                    <div class="left">
+                      <a
+                        href="https://www.figma.com/file/vV6Z39gSsE3hwbCC7WYIp2/CEB-Form?node-id=0%3A1"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-quill-pen-line"></i>
+                      </a>
+                    </div>
+                    <!-- <a href="#" class="button-right">Case Study
+                        <i class="ri-arrow-right-line"></i>
+                    </a> -->
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                loading="lazy"
+                src="assets/img/login.png"
+                alt=""
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web Design</span>
+                  <h3 class="projects__title">Login System</h3>
+                  <p class="projects__tages">Figma</p>
+                  <div class="projects__flex">
+                    <div class="left">
+                      <a
+                        href="https://alirezahekmati.github.io/login-group-project/signup.html"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-external-link-line"></i>
+                      </a>
+                      <a
+                        href="https://www.figma.com/file/GNDQvmeyCdjWEM1ZoJyyYO/%2FLogin-sytem?node-id=1%3A2"
+                        target="_blank"
+                        class="projects__button button button__small"
+                      >
+                        <i class="ri-quill-pen-line"></i>
+                      </a>
+                    </div>
+                    <!-- <a href="#" class="button-right">Case Study
+                                            <i class="ri-arrow-right-line"></i>
+                                        </a> -->
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!--=============== ABOUT ===============-->
+          <div
+            class="about__content none filters__active"
+            data-content
+            id="about"
+          >
+            <div class="about__area">
+              <h3 class="about__title">About me</h3>
+              <div class="divider">
+                <div class="large"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+
+              <p class="about__about-me">
+                Well-organised person, problem solver, independent employee with
+                high attention to detail. Fan of Games, outdoor activities. A
+                family person, interested in the entire web development and
+                design spectrum and working on ambitious projects with positive
+                people.
+              </p>
+
+              <img
+                class="about__floating"
+                src="./assets/img/floating.png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <!--=============== SKILLS ===============-->
+          <div class="skills__content grid" data-content id="skills">
+            <div class="skills__area">
+              <h3 class="skills__title">Frontend Developer</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">HTML</h3>
+                      <span class="skills__level">Advanced</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">CSS</h3>
+                      <span class="skills__level">Advanced</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">JavaScript</h3>
+                      <span class="skills__level">Advanced</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">React</h3>
+                      <span class="skills__level">Basic</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">SCSS</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Git</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills__area">
+              <h3 class="skills__title">Backend Developer</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">PHP</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">MySQL</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">PHPMyAdmin</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">WordPress</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ------------- Design ------------- -->
+
+            <!-- <div class="skills__area">
+                            <h3 class="skills__title">Design</h3>
     
                             <div class="skills__box">
                                 <div class="skills__group">
@@ -309,45 +661,7 @@
                                         <i class="ri-checkbox-circle-line"></i>
         
                                         <div>
-                                            <h3 class="skills__name">HTML</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-        
-                                    <div class="skills__data">
-                                        <i class="ri-checkbox-circle-line"></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">CSS</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-        
-                                    <div class="skills__data">
-                                        <i class="ri-checkbox-circle-line"></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">JavaScript</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="skills__group">
-                                    <div class="skills__data">
-                                        <i class="ri-checkbox-circle-line"></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">React</h3>
-                                            <span class="skills__level">Basic</span>
-                                        </div>
-                                    </div>
-        
-                                    <div class="skills__data">
-                                        <i class="ri-checkbox-circle-line"></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">SCSS</h3>
+                                            <h3 class="skills__name">Figma</h3>
                                             <span class="skills__level">Intermediate</span>
                                         </div>
                                     </div>
@@ -356,33 +670,7 @@
                                         <i class="ri-checkbox-circle-line"></i>
         
                                         <div>
-                                            <h3 class="skills__name">Git</h3>
-                                            <span class="skills__level">Intermediate</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skills__area">
-                            <h3 class="skills__title">Backend Developer</h3>
-    
-                            <div class="skills__box">
-                                <div class="skills__group">
-                                    <div class="skills__data">
-                                        <i class="ri-checkbox-circle-line"></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">PHP</h3>
-                                            <span class="skills__level">Intermediate</span>
-                                        </div>
-                                    </div>
-        
-                                    <div class="skills__data">
-                                        <i class="ri-checkbox-circle-line"></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">MySQL</h3>
+                                            <h3 class="skills__name">Photoshop</h3>
                                             <span class="skills__level">Intermediate</span>
                                         </div>
                                     </div>
@@ -394,7 +682,7 @@
                                         <i class="ri-checkbox-circle-line"></i>
         
                                         <div>
-                                            <h3 class="skills__name">PHPMyAdmin</h3>
+                                            <h3 class="skills__name">illustrator</h3>
                                             <span class="skills__level">Intermediate</span>
                                         </div>
                                     </div>
@@ -403,72 +691,112 @@
                                         <i class="ri-checkbox-circle-line"></i>
         
                                         <div>
-                                            <h3 class="skills__name">WordPress</h3>
+                                            <h3 class="skills__name">Premium Pro</h3>
+                                            <span class="skills__level">Intermediate</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">Audition</h3>
+                                            <span class="skills__level">Intermediate</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">Animate</h3>
                                             <span class="skills__level">Intermediate</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                        </div> -->
+          </div>
+        </div>
+      </section>
 
-            <!-- contact -->
+      <!-- contact -->
 
-            <section class="filters contact" id="contact">
+      <section class="filters contact" id="contact">
+        <div class="contact__notification success" id="success">
+          <p>Your message has been sent successfully</p>
+        </div>
+        <div class="contact__notification failed" id="failed">
+          <p>Couldn't send the message</p>
+        </div>
 
-                <div class="contact__notification success" id="success">
-                    <p>Your message has been sent successfully</p>
-                </div>
-                <div class="contact__notification failed" id="failed">
-                    <p>Couldn't send the message</p>
-                </div>
+        <h3 class="contact__title">Contact</h3>
+        <div class="divider">
+          <div class="large"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
 
-                <h3 class="contact__title">Contact</h3>
-                    <div class="divider">
-                        <div class="large"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>  
+        <form class="contact__form">
+          <!-- <input name="_redirect" type="hidden" id="name" value="https://your website url"> -->
+          <div class="contact__flex">
+            <div class="contact__input input-icon-set">
+              <i class="ri-user-line"></i>
+              <input
+                name="name"
+                type="text"
+                id="name"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div class="contact__input input-icon-set">
+              <i class="ri-mail-send-line"></i>
+              <input
+                name="email"
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+          </div>
 
-                <form class="contact__form">
-                    <!-- <input name="_redirect" type="hidden" id="name" value="https://your website url"> -->
-                    <div class="contact__flex">
-                        <div class="contact__input input-icon-set">
-                            <i class="ri-user-line"></i>
-                            <input name="name" type="text" id="name" placeholder="Name" required>
-                        </div>
-                        <div class="contact__input input-icon-set">
-                            <i class="ri-mail-send-line"></i>
-                            <input name="email" type="email" id="email" placeholder="Email" required>
-                        </div>
-                    </div>
+          <input type="text" name="_honey" style="display: none" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_next"
+            value="http://127.0.0.1:5500/index.html#done"
+          />
 
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#done">
+          <textarea
+            class="input-icon-set"
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+            required
+          ></textarea>
+          <input class="submit button__gray" value="Submit" type="submit" />
+        </form>
+      </section>
+    </main>
 
-                    <textarea class="input-icon-set" name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
-                    <input class="submit button__gray" value="Submit" type="submit">
-                </form>
+    <!--=============== FOOTER ===============-->
 
-            </section>
-        </main>
-        
-        <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+      <span class="footer__copy"> &#169; Amin. All rigths reserved </span>
+    </footer>
 
-        <footer class="footer container">
-            <span class="footer__copy">
-                &#169; Amin. All rigths reserved
-            </span>
-        </footer>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
 
-        <!--=============== SCROLLREVEAL ===============-->
-        <script src="assets/js/scrollreveal.min.js"></script>
-
-        <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
-    </body>
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
